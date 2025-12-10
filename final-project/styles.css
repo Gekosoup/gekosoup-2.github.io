@@ -59,42 +59,55 @@ nav a {
 }
 
 /* ---------- Desktop  ---------- */
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
 
-  header .container {
+  header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 40px;
   }
 
-  /* NAV LEFT / SEARCH RIGHT */
   nav ul {
-      margin-left: 40px;
-  }
-
-  .about .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-  }
-
-  .service-grid {
-      grid-template-columns: repeat(3, 1fr);
-  }
-
-  .team-grid {
-      grid-template-columns: 1.5fr 1fr;
-  }
-
-  .team-card img {
-      height: 350px;
+      display: flex;
+      gap: 20px;
   }
 
   .hero {
-      height: 450px;
+      padding: 200px;
+  }
+
+  /* Services into grid */
+  .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  /* Team side-by-side */
+  .team-grid {
+      display: flex;
+      gap: 20px;
+  }
+
+  /* Two-column About section */
+  .about {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+  }
+
+  .about img {
+      width: 50%;
+  }
+
+  /* Contact form + hours side-by-side */
+  .contact-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
   }
 }
+
 
 /* --------------------------------------------------
    GLOBAL STYLES
@@ -463,57 +476,5 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 20px;
-}
-
-/* ------------------------------
- DESKTOP MEDIA QUERY
---------------------------------*/
-@media (min-width: 900px) {
-
-  header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-
-  nav ul {
-      display: flex;
-      gap: 20px;
-  }
-
-  .hero {
-      padding: 200px;
-  }
-
-  /* Services into grid */
-  .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-  }
-
-  /* Team side-by-side */
-  .team-grid {
-      display: flex;
-      gap: 20px;
-  }
-
-  /* Two-column About section */
-  .about {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-  }
-
-  .about img {
-      width: 50%;
-  }
-
-  /* Contact form + hours side-by-side */
-  .contact-layout {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 30px;
-  }
 }
 
