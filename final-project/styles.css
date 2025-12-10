@@ -28,6 +28,34 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 8px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    padding: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 6px;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+}
 }
 
 /* ---------- Desktop  ---------- */
@@ -98,52 +126,7 @@ img {
 /* --------------------------------------------------
  HEADER & NAV
 -------------------------------------------------- */
-header {
-  background: #222;
-  color: #fff;
-  padding: 10px 0;
-}
 
-header .logo img {
-  width: 60px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav .active {
-  background: #c9a33d;
-  padding: 5px 15px;
-  border-radius: 3px;
-}
-
-.search-box {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.search-box input {
-  padding: 7px;
-  border: none;
-}
-
-.search-box button {
-  background: #c9a33d;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-}
 
 /* --------------------------------------------------
  HERO SECTION
@@ -330,4 +313,207 @@ footer {
   text-align: center;
 }
 
+/* ------------------------------
+   GLOBAL / RESET
+--------------------------------*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+section {
+  padding: 20px;
+}
+
+button, a.button {
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------------------
+ HEADER
+--------------------------------*/
+header {
+  background: #2d2d2d;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 8px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  padding: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 6px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+}
+
+/* ------------------------------
+ HERO SECTION
+--------------------------------*/
+.hero {
+  background: url('hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero p {
+  max-width: 450px;
+}
+
+.hero button {
+  margin-top: 12px;
+}
+
+/* ------------------------------
+ SERVICES
+--------------------------------*/
+.service-card {
+  background: #f4d88e;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+}
+
+/* ------------------------------
+ TEAM
+--------------------------------*/
+.team-member {
+  background: #f4d88e;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  border-radius: 5px;
+}
+
+/* ------------------------------
+ CONTACT
+--------------------------------*/
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* ------------------------------
+ FOOTER
+--------------------------------*/
+footer {
+  background: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ------------------------------
+ DESKTOP MEDIA QUERY
+--------------------------------*/
+@media (min-width: 900px) {
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  nav ul {
+      display: flex;
+      gap: 20px;
+  }
+
+  .hero {
+      padding: 200px;
+  }
+
+  /* Services into grid */
+  .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  /* Team side-by-side */
+  .team-grid {
+      display: flex;
+      gap: 20px;
+  }
+
+  /* Two-column About section */
+  .about {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+  }
+
+  .about img {
+      width: 50%;
+  }
+
+  /* Contact form + hours side-by-side */
+  .contact-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+  }
+}
 
